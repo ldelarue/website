@@ -1,3 +1,15 @@
+@font-face {
+  font-family: "Mona Sans";
+  src:
+    url("/fonts/MonaSans.woff2") format("woff2");
+  font-weight: 200 900;
+  font-stretch: 75% 125%;
+}
+
+html {
+  font-family: "Mona Sans", Helvetica, Arial, sans-serif;
+}
+
 html,
 body {
   height: 100%;
@@ -7,7 +19,6 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  font-family: Arial, Helvetica, sans-serif;
 }
 
 body>aside {
@@ -62,21 +73,21 @@ footer {
 
 @media print {
 
+  body>* {
+    display: none;
+  }
+
   html,
   body {
     background-color: white !important;
     print-color-adjust: exact;
     -moz-print-color-adjust: exact;
     -webkit-print-color-adjust: exact;
-    height: auto;
-  }
-
-  body>* {
-    display: none;
+    /* height: auto; */
+    overflow: hidden !important;
   }
 
   main {
     margin: 0 !important;
   }
-
 }
