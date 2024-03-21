@@ -66,6 +66,9 @@ footer {
   body {
     background-color: white !important;
     print-color-adjust: exact;
+    -moz-print-color-adjust: exact;
+    -webkit-print-color-adjust: exact;
+    height: auto;
   }
 
   body>* {
