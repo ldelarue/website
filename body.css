@@ -24,24 +24,24 @@ body {
 body>aside {
   width: 100%;
   position: sticky;
-  top: 1rem;
+  top: 0.5rem;
   text-align: right;
   z-index: 5;
 }
 
 body>aside>button {
-  right: 3rem;
+  right: 5%;
   position: relative;
   display: block;
-
   background-color: hsl(274, 54%, 18%);
   border: none;
   color: white;
   padding: 10px 16px;
+  border-radius: 6px;
+  font-size: 14px;
   text-align: center;
   text-decoration: none;
   display: inline-block;
-  font-size: 16px;
   cursor: pointer;
 }
 
@@ -89,5 +89,26 @@ footer {
 
   main {
     margin: 0 !important;
+  }
+}
+
+@media (max-width: 210mm) {
+
+  html,
+  body {
+    width: fit-content;
+  }
+
+  body>aside {
+    position: fixed;
+  }
+
+  body>aside>button {
+    padding: 8px 10px;
+    border-radius: 6px;
+  }
+
+  footer {
+    width: 100%;
   }
 }
