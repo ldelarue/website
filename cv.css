@@ -312,14 +312,9 @@ a {
 }
 
 .period {
-  font-style: italic;
+  /* font-style: italic; */
   color: var(--tern-color);
 }
-
-/* 
-.dates {
-    font-size: smaller;
-} */
 
 .employer {
   display: flex;
