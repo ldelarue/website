@@ -1,11 +1,3 @@
-@font-face {
-  font-family: "Mona Sans";
-  src:
-    url("/fonts/MonaSans.woff2") format("woff2");
-  font-weight: 200 900;
-  font-stretch: 75% 125%;
-}
-
 :root {
   --main-color: hsl(274, 54%, 41%);
   --light-color: hsl(274, 54%, 55%);
@@ -26,7 +18,6 @@ main {
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
   grid-template-rows: auto auto auto auto auto auto auto 20px;
 
-  font-family: "Mona Sans", sans-serif;
   font-weight: normal;
   font-size: small;
 
