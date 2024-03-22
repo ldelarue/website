@@ -1,26 +1,22 @@
 :root {
-  --main-color: hsl(274, 54%, 41%);
-  --light-color: hsl(274, 54%, 55%);
-  --dark-color: hsl(274, 54%, 18%);
-  --tern-color: hsl(274, 35%, 41%);
+  --main-color: hsl(274deg 54% 41%);
+  --light-color: hsl(274deg 54% 55%);
+  --dark-color: hsl(274deg 54% 18%);
+  --tern-color: hsl(274deg 35% 41%);
 }
 
 main {
   background-color: white;
   color: var(--dark-color);
-  box-shadow: 20px 5px 20px 5px rgb(0, 0, 0, 0.4);
+  box-shadow: 20px 5px 20px 5px rgb(0 0 0 / 40%);
   width: 210mm;
   height: 297mm;
-
-  margin: auto auto;
-
+  margin: auto;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
   grid-template-rows: auto auto auto auto auto auto auto 20px;
-
   font-weight: normal;
   font-size: small;
-
   position: relative;
 }
 
@@ -69,7 +65,7 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1.5rem 5rem 1rem 5rem;
+  padding: 1.5rem 5rem 1rem;
   color: white;
   background-color: var(--main-color);
   grid-column: 1 / 8;
@@ -115,6 +111,12 @@ q::after {
   right: -1.5rem;
 }
 
+.timeline ol {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
 header aside>ul {
   display: flex;
   flex-direction: column;
@@ -158,14 +160,11 @@ section {
 #contacts {
   display: flex;
   background-color: var(--light-color);
-  box-shadow: inset 0px -10px 15px -4px rgba(0, 0, 0, 0.3);
+  box-shadow: inset 0 -10px 15px -4px rgb(0 0 0 / 30%);
   color: white;
   align-items: center;
-
-
   height: 3rem;
   margin-bottom: 1rem;
-
   grid-column: 1 / 8;
   grid-row: 2;
 }
@@ -189,7 +188,6 @@ section {
 #section-pro {
   display: flex;
   gap: 0.2rem;
-
   grid-column: 1 / 4;
   grid-row: 3 / 8;
 }
@@ -197,7 +195,6 @@ section {
 #section-mantra {
   grid-column: 1 / 4;
   grid-row: 7;
-
   display: none;
 }
 
@@ -205,13 +202,6 @@ section {
   justify-content: center;
 }
 
-
-.timeline,
-.timeline ol {
-  display: flex;
-  flex-direction: column;
-  gap: 0.5rem;
-}
 
 .timeline-fig>li {
   position: relative;
@@ -228,9 +218,11 @@ section {
 .timeline-fig>li::after {
   background-color: var(--light-color);
   width: 4px;
-  /* height: calc(100% - 30px);*/
+
+  /* height: calc(100% - 30px); */
   bottom: -12px;
   height: calc(100% + 5px);
+
   /* bottom: -10px; */
 
   left: -27px;
@@ -245,7 +237,6 @@ section {
   height: 20px;
   z-index: 3;
   top: 4px;
-
   left: -35px;
 }
 
