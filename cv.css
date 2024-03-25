@@ -15,8 +15,10 @@ main {
   margin: auto auto;
 
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
-  grid-template-rows: auto auto auto auto auto auto auto 20px;
+  grid-template-columns: repeat(6, 1fr);
+  /* grid-template-rows: auto auto auto auto auto auto auto 20px; */
+  /* grid-template-rows: repeat(auto-fill, 1fr); */
+  grid-template-rows: repeat(7, auto);
 
   font-weight: normal;
   font-size: small;
@@ -170,12 +172,6 @@ section {
   grid-row: 2;
 }
 
-#section-about {
-  grid-column: 1 / 4;
-  grid-row: 3;
-  display: none;
-}
-
 #section-skills {
   grid-column: 4 / 8;
   grid-row: 3;
@@ -258,8 +254,7 @@ section {
 }
 
 .timeline-fig>li:last-of-type::after {
-  background:
-    repeating-linear-gradient(180deg,
+  background: repeating-linear-gradient(180deg,
       var(--light-color),
       var(--light-color) 50%,
       transparent 90%,
