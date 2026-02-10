@@ -138,7 +138,7 @@ header aside>ul {
 #section-interests>ul,
 #section-edu>ol,
 #section-activities>ol,
-#section-talks>ol {
+#section-talks>ul {
   margin-left: 1rem;
 }
 
@@ -304,4 +304,52 @@ a {
 
 .blurred {
   filter: blur(0.25rem);
+}
+
+/* Hide job descriptions for Sopra Steria and Advens */
+.hide-description .job p,
+.hide-description .job ul,
+.job.hide-description p {
+  display: none;
+}
+
+/* Add space after "What the doc?" description */
+#section-talks > p {
+  margin-bottom: 0.75rem;
+}
+
+/* Increase space between timeline items in activities section */
+#section-activities > .timeline {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+/* Increase space between timeline items in education section */
+#section-edu > .timeline {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+/* Make h3 smaller in education section */
+#section-edu h3 {
+  font-size: small;
+}
+
+/* Add spacing between inner elements in talks section list items */
+#section-talks ul > li > * {
+  margin-bottom: 0.5rem;
+}
+
+#section-talks ul > li > *:last-child {
+  margin-bottom: 0;
+}
+
+/* Add space and left margin for talks list */
+#section-talks ol {
+  margin-left: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
 }
